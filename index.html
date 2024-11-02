@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta-Inspired Todo App</title>
+    <!-- Reset and Main Stylesheets -->
+    <link rel="stylesheet" href="to-do.css">
+
+</head>
+<body>
+    <div class="todo-container">
+        <header class="todo-header">
+            <h1>Task Manager</h1>
+            <div class="task-input-wrapper">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="What needs to be done?"
+                >
+                <button id="addTaskBtn" class="add-task-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <section class="todo-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </section>
+
+        <main class="todo-list-container">
+            <ul id="todoList" class="todo-list"></ul>
+        </main>
+
+        <footer class="todo-footer">
+            <span id="taskCount">0 tasks</span>
+            <button id="clearCompletedBtn" class="clear-completed-btn">
+                Clear Completed
+            </button>
+        </footer>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="to-do.js"></script>
+
+</body>
+</html>
